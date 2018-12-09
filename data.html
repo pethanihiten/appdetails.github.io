@@ -1,59 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Vogue</title>
-  <meta name="Description" content="Vogue template project">
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1561.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #7d2727; -webkit-text-stroke: #7d2727; background-color: #eff0f1}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #303336; -webkit-text-stroke: #303336; background-color: #eff0f1}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #303336; -webkit-text-stroke: #303336}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
 <body>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;pre&gt;</span></p>
-<p class="p1"><span class="s1">&lt;code&gt;</span></p>
-<p class="p2"><span class="s1">[</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "red",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#f00"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "green",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#0f0"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "blue",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#00f"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "cyan",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#0ff"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "magenta",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#f0f"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "yellow",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#ff0"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>},</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>{</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>color: "black",</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>value: "#000"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1">]</span></p>
-<p class="p3"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">&lt;/code&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/pre&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<input type="button" value="Generate Table" onclick="GenerateTable()" />
+<hr />
+<div id="dvTable">
+</div>
+<script type="text/javascript">
+function GenerateTable() {
+    //Build an array containing Customer records.
+    var customers = new Array();
+    customers.push(["Customer Id", "Name", "Country"]);
+    customers.push([1, "John Hammond", "United States"]);
+    customers.push([2, "Mudassar Khan", "India"]);
+    customers.push([3, "Suzanne Mathews", "France"]);
+    customers.push([4, "Robert Schidner", "Russia"]);
+ 
+    //Create a HTML Table element.
+    var table = document.createElement("TABLE");
+    table.border = "1";
+ 
+    //Get the count of columns.
+    var columnCount = customers[0].length;
+ 
+    //Add the header row.
+    var row = table.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("TH");
+        headerCell.innerHTML = customers[0][i];
+        row.appendChild(headerCell);
+    }
+ 
+    //Add the data rows.
+    for (var i = 1; i < customers.length; i++) {
+        row = table.insertRow(-1);
+        for (var j = 0; j < columnCount; j++) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = customers[i][j];
+        }
+    }
+ 
+    var dvTable = document.getElementById("dvTable");
+    dvTable.innerHTML = "";
+    dvTable.appendChild(table);
+}
+</script>
+ 
 </body>
 </html>
