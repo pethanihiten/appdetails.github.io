@@ -9,6 +9,7 @@
   "click": 5,
   "hidebanner": 1,
   "visible": 1,
+  "amount":5,
   "interstitial": [
     "ca-app-pub-7438708544894081/7951941557",
     "ca-app-pub-7438708544894081/9271262620",
