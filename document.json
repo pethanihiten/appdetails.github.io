@@ -9,10 +9,10 @@
   "click": 5,
   "hidebanner": 1,
   "visible": 1,
-  "interstitial": {
+  "interstitial": [
     "ca-app-pub-7438708544894081/7951941557",
     "ca-app-pub-7438708544894081/9271262620",
     "ca-app-pub-7438708544894081/9626485843",
     "ca-app-pub-7438708544894081/7951941557"
-  }
+  ]
 }
