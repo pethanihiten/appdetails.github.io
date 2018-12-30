@@ -4,7 +4,7 @@
     "YOUR_PLACEMENT_ID"
   ],
   "click": 5,
-  "visible": 1,
+  "visible": 0,
   "amount":5,
   "interstitial": [
     "ca-app-pub-3940256099942544/1033173712",
