@@ -1,0 +1,18 @@
+{
+  "nativeads": [
+    "YOUR_PLACEMENT_ID",
+    "YOUR_PLACEMENT_ID"
+  ],
+  "adstype":3,
+  "click": 0,
+  "visible": 1,
+  "amount":5,
+  "interstitial": [
+    "ca-app-pub-3940256099942544/1033173712",
+    "ca-app-pub-3940256099942544/1033173712"
+  ],
+  "fbinterstitial": [
+    "VID_HD_9_16_39S_APP_INSTALL#YOUR_PLACEMENT_ID",
+    "VID_HD_16_9_46S_APP_INSTALL#YOUR_PLACEMENT_ID"
+  ]
+}
